@@ -15,7 +15,7 @@ namespace ClassLibrary1.Tests
         public void BilPrisTest()
         {
             //Arrange
-            var bil = new Bil();
+            var bil = new Bil("1234567", DateTime.Now);
             //Act
             int pris = bil.Pris();
             //Assert
@@ -26,11 +26,21 @@ namespace ClassLibrary1.Tests
         public void BilKøretøjTest()
         {
             //Arrange
-            var bil = new Bil();
+            var bil = new Bil("1234567", DateTime.Now);
             //Act
             string køretøj = bil.Køretøj();
             //Assert
             Assert.AreEqual("Bil",køretøj);
+        }
+        [TestMethod()]
+        public void BilNummberpladeTest()
+        {
+            //Arrange
+            var bil = new Bil("1234567",DateTime.Now);
+            //Act
+            string nummerplade = bil.Nummberpladecount();
+            //Assert
+            Assert.AreEqual("Bil", nummerplade);
         }
     }
 }

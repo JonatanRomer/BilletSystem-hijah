@@ -15,7 +15,7 @@ namespace ClassLibrary1.Tests
         public void McPrisTest()
         {
             //Arange
-            var mc = new MC();
+            var mc = new MC("1234567",DateTime.Now);
             //Act
             int pris = mc.Pris();
             //Assert
@@ -26,7 +26,7 @@ namespace ClassLibrary1.Tests
         public void McKøretøjTest()
         {
             //Arrange
-            var mc = new MC();
+            var mc = new MC("1234567",DateTime.Now);
             //Act
             string køretøj = mc.Køretøj();
             //Assert
