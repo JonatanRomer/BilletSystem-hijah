@@ -15,9 +15,13 @@ namespace ClassLibrary1
             return "Bil";
         }
 
+        /// <summary>
+        /// Lav en test over Nummberpladecount() i Bilbase klassen (denne klasse)
+        /// </summary>
+        /// <returns></returns>
         public string Nummberpladecount()
         {
-
+            // (Nummerplade.Length > 7)
             if (Nummerplade.Length <= 7)
             {
                 throw new ArgumentException("Ups: Nummerpladen skal være 7 tegn eller mindre");

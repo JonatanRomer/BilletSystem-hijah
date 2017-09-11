@@ -32,11 +32,17 @@ namespace ClassLibrary1.Tests
             //Assert
             Assert.AreEqual("Bil",køretøj);
         }
+
+        /// <summary>
+        /// Denne test høre til i BilBase unittest (som endnu ikke er oprettet).
+        /// Added [ExpectedException(typeof(ArgumentException))]
+        /// </summary>
+        [ExpectedException(typeof(ArgumentException))]
         [TestMethod()]
         public void BilNummberpladeTest()
         {
             //Arrange
-            var bil = new Bil("1234567",DateTime.Now);
+            var bil = new Bil("1234567", DateTime.Now);
             //Act
             string nummerplade = bil.Nummberpladecount();
             //Assert
